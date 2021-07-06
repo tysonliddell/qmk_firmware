@@ -1,3 +1,18 @@
+# Tyson's custom Miryoku
+- Followed instructions outlined in commits on the example branch [here](https://github.com/manna-harbour/qmk_firmware/commits/miryoku-examples-add-layers/keyboards/crkbd/keymaps/miryoku-examples-add-layers) to make changes to the Miryoku layout.
+- Involved copying combining a couple of files and copying to `keyboards/crkbd/keymaps/tyson-myryoku` for my Corne keyboard.
+- I have modified the default Miryoku layout to include a left pinky escape key as I have the extra keys.
+- I have also added an extra CLI argument to allow toggling future customisations on/off easily (not used yet).
+
+To flash run
+```bash
+make crkbd:tyson-miryoku:flash MIRYOKU_ALPHAS=QWERTY MIRYOKU_NAV=VI MIRYOKU_CLIPBOARD=WIN BOOTLOADER=atmel-dfu
+```
+
+to flash with my own custom options (WIP) run
+```bash
+make crkbd:tyson-miryoku:flash MIRYOKU_ALPHAS=QWERTY MIRYOKU_NAV=VI MIRYOKU_CLIPBOARD=WIN BOOTLOADER=atmel-dfu TYSON_CUSTOM=YES
+```
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
